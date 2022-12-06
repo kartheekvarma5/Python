@@ -1,3 +1,5 @@
+##========================= Python Scripting Tutorials Basics ==========================
+
 a = 2
 b = 3
 c = 4
@@ -40,7 +42,6 @@ print (10*20+30)        #Writing this way sometimes gives wrong output so make s
 print ((10*20)+30)
 
 #Strings
-
 X = "Hai"               #You Should Always use Double/single Quotation if any Variable data is a string even it is caps or small else it work load and you will get errors
 Y1 = "How"
 Z = "Are You"
@@ -77,20 +78,17 @@ print (Name1+'200')
 #We need to use str(int_value) to convert int value to string
 
 #str(100)       #Now 100 is String, How to know it is converted or not use print (type(str(100)) to check it
-
 print (str(Value))
 print (type(str(Value)))
 
 Value1=str(Value)
 print (Value1)
 print (Name1+Value1)
-
 #We can convert Few strings to int values using int(str_value). But not sure on which string values it works check once in internet or python docs once.
 
 #Escape Sequences (If we use single or Double Quote in Words we may sometimes get error how to avoid those in python
 
 #tmp1='I'm Engineer'     //This Gives Error Where the ' is getting ended and started to avoid this problem we need to use back slash
-
 tmp1='I\'m Engineer'
 print (tmp1)
 
@@ -224,7 +222,6 @@ values()		Returns a list of all the values in the dictionary
 Refer Above Link
 '''
 #IF Condition
-
 val1 = 10
 val2 = 3
 val3 = 100
@@ -399,6 +396,5 @@ content = "some content"
 print (W(read(testfile.txt)))
 W.close()
 print(R.read())
-
 
 #================ END OF BASIC PYTHON SCRIPTING ========================
