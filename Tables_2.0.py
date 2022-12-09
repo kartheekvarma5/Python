@@ -22,7 +22,7 @@ try:
     else:
         print ("\tSomething went wrong. Please check the same..")
 
-except RevInput as str:
+except:
     Instructions = '''
     You have enter wrong value.. Possible Cases are as follows.. Please try again..
         1) You Might have entered a Alphabetical Character.
