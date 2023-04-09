@@ -133,3 +133,70 @@ type(a)
 <class 'int'>
 id(a)
 2190496498192
+=====================
+#Count 1-20 in same position
+import time
+for i in range(1,21):
+    time.sleep(0.5)
+    print(i, end='\r')  #Return carriage at same line.
+
+#Linux Commands
+import os
+os.system('dir H:\Kartheek\DevOps\Python')
+
+#mailing
+import smtplib
+server = smtplib.SMTP('smtp.gmail.com', 587)
+server.starttls()
+server.login('fromemailid@gmail.com', 'password')
+server.sendmail('fromemailid@gmail.com', 'toemailid@gmail.com', 'Message Body')
+
+for i in range(4):
+    for j in range(4):
+        print('*', end=" ")
+    print()
+
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+
+for i in range(1,11,2):
+    print(i)
+
+    Print 1 to 10 but skip 2 numberss before printinf.. Also you can say print odd numbers
+
+for i in range(11,1,-1):
+    print(i)
+
+print in reverse order
+
+i=1
+while i<=5:
+    print ('Kartheek ',end="")
+    j=1
+    while j<=4:
+        print ('varma ', end="")
+        j = j + 1
+    i = i + 1
+    print()
+	
+Kartheek varma varma varma varma 
+Kartheek varma varma varma varma 
+Kartheek varma varma varma varma 
+Kartheek varma varma varma varma 
+Kartheek varma varma varma varma 
+
+for i in range(4):
+    print('*', end=" ")
+    for j in range(4):
+        print('*', end=" ")
+    print()
+
+* * * * *
+* * * * *
+* * * * *
+* * * * *
+
+==========================

@@ -1,4 +1,3 @@
-
 #Multiple Images
 
 from PIL import Image

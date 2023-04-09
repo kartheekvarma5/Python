@@ -11,7 +11,6 @@ def ECHO(message,file):
     return output
     
 #if __name__ == '__main__' :
-    
 #    file = testfile.txt
     
 ECHO("HI","testfile.txt")

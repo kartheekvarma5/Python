@@ -12,10 +12,3 @@ if (b==4):
     print ('yes b is equal to 4')
 else:
     print ('no b is not-equalto 4')
-
-import os 
-
-if os.path.isdir('/root/test'):
-    os.system('cp -rv /root/test /home/user/test')
-else:
-    print("File not exist")
