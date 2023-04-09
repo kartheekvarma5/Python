@@ -1,4 +1,8 @@
+from getpass import getpass
 
-for i in range(4):
-    for j in range(3):
-        print ("*", end="")
+PassKey = getpass("Please Enter Your Password: ")
+
+if PassKey == 'Hello':
+    print("Key is Matching")
+else:
+    print("Key is not Matching")

@@ -1,0 +1,25 @@
+5 // 2	(only int val//Also called as floor division)
+5 ** 2	(Square 5^2)
+5 % 2	(Modulus which is also called as remainder)
+3 * 'Kartheek'	(print multiple times)
+KartheekKartheekKartheek
+print(r'c:\hello\')	(Raw string)
+
+_ is operation output (7 is o/p of some operation || _ + 3 = 10 )
+
+var + 'string' ==> concatenation
+
+-7 -6 -5 -4 -3 -2 -1
+ Y  O  U  T  U  B  E
+ 0  1  2  3  4  5  6
+ 
+name(5) // Out is B // name(-6) is O //
+ 
+name[0:2] => YO || name[1:4] ==> OUT ||name[1:] ==> YOUTUBE ||name[:4] ==> YOUT 
+name[3:10] ==> TUBE (no errors will come since if we just use outof bounds we get error here in this case we dont get)
+
+Strings in Python are immutable.
+
+'my ' + name[3:] ==> my tube
+to check length of the string
+len(name)
