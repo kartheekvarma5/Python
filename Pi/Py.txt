@@ -1,0 +1,285 @@
+===================================================================================
+Python Class
+===================================================================================
+Session - 01
+===================================================================================
+Guido van Rossum - 1991
+
+3.x ===> Will be the Final Version and we will have multople sub versions but no future release of 4.X Mostly
+
+There is no backward compatibility with 2.x
+
+>>> is Python Prompt
+
+Why Python is popular? Due to its Huge collection of Modules and pre-written Code. So we can complete the development early.
+
+what are Modules?
+Module is a Folder or a container which contains Collection of functions (or) Collection of Classes (or) Collection of Variables (or) Collection of All together.
+
+Class and Object
+----------------
+In Python everything is object.
+
+Python is an object oriented programming language. Almost everything in Python is an object, with its properties and methods. A Class is like an object constructor, or a "blueprint" for creating objects.
+
+Object is a Xerox Copy of Class
+
+Pythion IDLE : Integrated Development And Development Environment.
+===================================================================================
+Session 02
+===================================================================================
+
+What is Function?
+-------------------
+A function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
+How to Identify :  Anything which has '()' is called as function in python 
+					Ex : sys(), print(), id(), len(), etc....
+
+How to find what type is something?
+
+type(dir) ==> It is a function
+
+Example : 
+>>> type(dir)		//Use this what type of that dir() function.
+<class 'builtin_function_or_method'>		//So we found type of dir() function is builtin_function_or_method.
+>>> type(dir())		//Dont Mention () to know what type it is. If you want to know the Output of that dir() then you can use Just to know the dir() o/p type.
+<class 'list'>		//We got list because the dir() function output is in List.
+>>> a=10
+>>> type(a)
+<class 'int'>
+
+What is the use if dir() fuction?
+=======================
+dir() function is used to listout all loaded element(variable/Classes/functions/Modules/Dictionaries etc..) in that particular session.
+
+This is similar to help. But it just list what are there in that object. But help will have full documentation of that object and its operations etc.
+
+***When we compare dir() with shell script it is something equal to env . it is like a environment set to python to see all loaded things.***
+
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__' ]
+
+>>> type(__builtins__)
+<class 'module'>
+>>> type(__annotations__)
+<class 'dict'>
+
+>>> a = 10
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'a' ]
+
+if you see above output for both dir() output you can see variable 'a' has been loaded in second time.
+
+>>> b = 'hello'
+>>> c = True
+
+>>>  dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'a', 'b', 'c' ]
+
+if you see above you can see all variables loaded to dir() . 
+
+How to know what all operations i can do on some variable/Classes/functions/Modules/Dictionaries. 
+Like lets take an example saying variable "Test" has a string value "Hello". Now i want to convert Test variable content to all Upper cases. So i need to know what function/class which is used to do that to do some operations on str data which i have in Test variable. to find that we need to use dir(<ThatVar>). It will list all available operations which we can perform.
+
+Example:
+
+>>> Test='Hello'
+>>> Test
+'Hello'
+>>> type(Test)
+<class 'str'>
+>>> dir(Test)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+If you see above you can find replace, Upper, Lower etc operations which are available to perform on str data.
+
+You can also check like this dierctly for a str, int if you know it. if you dont know you can use Var so that dir() wil automatically find its type and then checks the available operations for that.
+
+>>> dir(str)
+['__add__', '__class__', '__contains__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getitem__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__iter__', '__le__', '__len__', '__lt__', '__mod__', '__mul__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__rmod__', '__rmul__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', 'capitalize', 'casefold', 'center', 'count', 'encode', 'endswith', 'expandtabs', 'find', 'format', 'format_map', 'index', 'isalnum', 'isalpha', 'isascii', 'isdecimal', 'isdigit', 'isidentifier', 'islower', 'isnumeric', 'isprintable', 'isspace', 'istitle', 'isupper', 'join', 'ljust', 'lower', 'lstrip', 'maketrans', 'partition', 'removeprefix', 'removesuffix', 'replace', 'rfind', 'rindex', 'rjust', 'rpartition', 'rsplit', 'rstrip', 'split', 'splitlines', 'startswith', 'strip', 'swapcase', 'title', 'translate', 'upper', 'zfill']
+
+>>> dir(int)
+['__abs__', '__add__', '__and__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__index__', '__init__', '__init_subclass__', '__int__', '__invert__', '__le__', '__lshift__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__or__', '__pos__', '__pow__', '__radd__', '__rand__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rlshift__', '__rmod__', '__rmul__', '__ror__', '__round__', '__rpow__', '__rrshift__', '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', '__xor__', 'as_integer_ratio', 'bit_count', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
+
+>>> dir(float)
+['__abs__', '__add__', '__bool__', '__ceil__', '__class__', '__delattr__', '__dir__', '__divmod__', '__doc__', '__eq__', '__float__', '__floor__', '__floordiv__', '__format__', '__ge__', '__getattribute__', '__getformat__', '__getnewargs__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__int__', '__le__', '__lt__', '__mod__', '__mul__', '__ne__', '__neg__', '__new__', '__pos__', '__pow__', '__radd__', '__rdivmod__', '__reduce__', '__reduce_ex__', '__repr__', '__rfloordiv__', '__rmod__', '__rmul__', '__round__', '__rpow__', '__rsub__', '__rtruediv__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', '__trunc__', 'as_integer_ratio', 'conjugate', 'fromhex', 'hex', 'imag', 'is_integer', 'real']
+
+You can see different operations available for int/str/float like this you can check for all things. it is something acts like a dierctory of operations/env/manual etc.. and complete info on that.
+
+Now The Question is how can you see type of 'upper' operation. Giving type(upper) is giving error.
+
+>>> type(str.upper)
+<class 'method_descriptor'>
+
+You Need to use/link in a way from where you need to fetch so you need to use like str.upper (or) a.upper to find out what type it is.
+
+>>> dir(str.upper)
+['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__name__', '__ne__', '__new__', '__objclass__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__']
+
+>>> type(str.upper.__call__)
+<class 'method-wrapper'>
+
+I loaded Module OS or some Module where can you see its loaded
+
+Use dir() to see it.
+
+>>> import os
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__', 'os']
+>>> dir(os)
+['DirEntry', 'EX_OK', 'F_OK', 'GenericAlias', 'Mapping', 'MutableMapping', 'O_APPEND', 'O_BINARY', 'O_CREAT', 'O_EXCL', 'O_NOINHERIT', 'O_RANDOM', 'O_RDONLY', 'O_RDWR', 'O_SEQUENTIAL', 'O_SHORT_LIVED', 'O_TEMPORARY', 'O_TEXT', 'O_TRUNC', 'O_WRONLY', 'P_DETACH', 'P_NOWAIT', 'P_NOWAITO', 'P_OVERLAY', 'P_WAIT', 'PathLike', 'R_OK', 'SEEK_CUR', 'SEEK_END', 'SEEK_SET', 'TMP_MAX', 'W_OK', 'X_OK', '_AddedDllDirectory', '_Environ', '__all__', '__builtins__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__spec__', '_check_methods', '_execvpe', '_exists', '_exit', '_fspath', '_get_exports_list', '_walk', '_wrap_close', 'abc', 'abort', 'access', 'add_dll_directory', 'altsep', 'chdir', 'chmod', 'close', 'closerange', 'cpu_count', 'curdir', 'defpath', 'device_encoding', 'devnull', 'dup', 'dup2', 'environ', 'error', 'execl', 'execle', 'execlp', 'execlpe', 'execv', 'execve', 'execvp', 'execvpe', 'extsep', 'fdopen', 'fsdecode', 'fsencode', 'fspath', 'fstat', 'fsync', 'ftruncate', 'get_exec_path', 'get_handle_inheritable', 'get_inheritable', 'get_terminal_size', 'getcwd', 'getcwdb', 'getenv', 'getlogin', 'getpid', 'getppid', 'isatty', 'kill', 'linesep', 'link', 'listdir', 'lseek', 'lstat', 'makedirs', 'mkdir', 'name', 'open', 'pardir', 'path', 'pathsep', 'pipe', 'popen', 'putenv', 'read', 'readlink', 'remove', 'removedirs', 'rename', 'renames', 'replace', 'rmdir', 'scandir', 'sep', 'set_handle_inheritable', 'set_inheritable', 'spawnl', 'spawnle', 'spawnv', 'spawnve', 'st', 'startfile', 'stat', 'stat_result', 'statvfs_result', 'strerror', 'supports_bytes_environ', 'supports_dir_fd', 'supports_effective_ids', 'supports_fd', 'supports_follow_symlinks', 'symlink', 'sys', 'system', 'terminal_size', 'times', 'times_result', 'truncate', 'umask', 'uname_result', 'unlink', 'unsetenv', 'urandom', 'utime', 'waitpid', 'waitstatus_to_exitcode', 'walk', 'write']
+
+>>> type(os)
+<class 'module'>
+
+Simple type() function asks Questions to that Object "Who are you" ?? Like wise dir() function will ask object "what do you have and what are those" ?? 
+
+From Where dir(), type(), print() etc functions are getting loaded and how to see.
+
+As we seen above dir is used to see what are loaded in the current session. From that we can see from where it is loaded. As we look specifically we can see '__builtins__' Module all built in functions and etc things are getting loaded.
+
+How to see same how we saw above.
+
+Example : 
+>>> dir()
+[ '__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__' ]
+>>> dir(__builtins__)
+['ArithmeticError', 'AssertionError', 'AttributeError', 'BaseException', 'BaseExceptionGroup', 'BlockingIOError', 'BrokenPipeError', 'BufferError', 'BytesWarning', 'ChildProcessError', 'ConnectionAbortedError', 'ConnectionError', 'ConnectionRefusedError', 'ConnectionResetError', 'DeprecationWarning', 'EOFError', 'Ellipsis', 'EncodingWarning', 'EnvironmentError', 'Exception', 'ExceptionGroup', 'False', 'FileExistsError', 'FileNotFoundError', 'FloatingPointError', 'FutureWarning', 'GeneratorExit', 'IOError', 'ImportError', 'ImportWarning', 'IndentationError', 'IndexError', 'InterruptedError', 'IsADirectoryError', 'KeyError', 'KeyboardInterrupt', 'LookupError', 'MemoryError', 'ModuleNotFoundError', 'NameError', 'None', 'NotADirectoryError', 'NotImplemented', 'NotImplementedError', 'OSError', 'OverflowError', 'PendingDeprecationWarning', 'PermissionError', 'ProcessLookupError', 'RecursionError', 'ReferenceError', 'ResourceWarning', 'RuntimeError', 'RuntimeWarning', 'StopAsyncIteration', 'StopIteration', 'SyntaxError', 'SyntaxWarning', 'SystemError', 'SystemExit', 'TabError', 'TimeoutError', 'True', 'TypeError', 'UnboundLocalError', 'UnicodeDecodeError', 'UnicodeEncodeError', 'UnicodeError', 'UnicodeTranslateError', 'UnicodeWarning', 'UserWarning', 'ValueError', 'Warning', 'WindowsError', 'ZeroDivisionError', '_', '__build_class__', '__debug__', '__doc__', '__import__', '__loader__', '__name__', '__package__', '__spec__', 'abs', 'aiter', 'all', 'anext', 'any', 'ascii', 'bin', 'bool', 'breakpoint', 'bytearray', 'bytes', 'callable', 'chr', 'classmethod', 'compile', 'complex', 'copyright', 'credits', 'delattr', 'dict', 'dir', 'divmod', 'enumerate', 'eval', 'exec', 'exit', 'filter', 'float', 'format', 'frozenset', 'getattr', 'globals', 'hasattr', 'hash', 'help', 'hex', 'id', 'input', 'int', 'isinstance', 'issubclass', 'iter', 'len', 'license', 'list', 'locals', 'map', 'max', 'memoryview', 'min', 'next', 'object', 'oct', 'open', 'ord', 'pow', 'print', 'property', 'quit', 'range', 'repr', 'reversed', 'round', 'set', 'setattr', 'slice', 'sorted', 'staticmethod', 'str', 'sum', 'super', 'tuple', 'type', 'vars', 'zip']
+
+You can find all the builtins modules/functions/classes coming from '__builtins__' Module.
+
+How to find help/Manual/Some decription and uses of some command/function/class etc.. and how to use it.. Same like Man in Linux.
+Use help() funtion to get the information
+
+help(int) ==> This Gives Full information about int ..
+
+>>> help(len)
+Help on built-in function len in module builtins:
+
+len(obj, /)
+    Return the number of items in a container.
+	
+A sample thing to know what is type and what it has , how to use and using it.
+I am using Power Function/Method for our example.
+>>> pow
+<built-in function pow>
+>>> type(pow)
+<class 'builtin_function_or_method'>
+>>> dir(pow)
+['__call__', '__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__getstate__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__self__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__text_signature__']
+>>> help(pow)
+Help on built-in function pow in module builtins:
+
+pow(base, exp, mod=None)
+    Equivalent to base**exp with 2 arguments or base**exp % mod with 3 arguments
+
+    Some types, such as ints, are able to use a more efficient algorithm when
+    invoked using the three argument form.
+
+>>> pow(2,4)
+16
+>>> pow(10,10)
+10000000000
+
+===========================================================================
+Session 03
+Variables
+
+***Object is a Xerox Copy of Class***
+
+What ever the functions where are present in a Module but not inside a class is considered as function.
+
+What is a Method? Why Method has same brackets as functions??
+We know Module contains Classes/Functions/Variables etc.. But What ever the function which are present inside the Classes are considered as "Method" .
+
+Difference Between Functions and Methods
+Functions are outside of Classes, Whereas Methods are inside the Class.
+
+Will get details info in upcoming classes.
+
+
+How to understand this and how to read this.. ? Say what is __annotations__ inv dir() and what is the relation ship between class dict??
+
+>>> dir()
+['__annotations__', '__builtins__', '__doc__', '__loader__', '__name__', '__package__', '__spec__' ]
+>>> type(__annotations__)
+<class 'dict'>
+
+Here "__annotations__" is an object of class type dict. This way you need to understand.
+
+=============
+
+How to Create a Variables?
+
+Variable is also called as identifier. And the value whcih we are loading into it is called as literal.
+Example: 
+a = 10
+Here	a	==> Identifier
+		10	==> Literal
+		=	==> assighnment Operator
+
+Rules/naming Conventions to be followed while Creating a Variable
+
+1) Variable Should have AplhaNumeric values and should not have special characters other than (_) i.e (A-Z a-z 0-9 _ ) : Approx 63 Letters
+2) Variable should not start with digit but variable can have digit.	Ex: 1) Test1 (Acceptable) 2) 1Test (Not Acceptable)
+3) There is no limit to define the variable name but make sure to specify the meaningful name. Ex: 1) Test (Acceptable) 2) wjbvuwebvjwevjbwv (Not Acceptable)
+4) Python Variables are case sensitive.
+5) Varible name should not be from reserved keywords (35). Dont use them. (Mentioned Below and how to check them)
+	
+	What are Reserved Keywords?
+	Reserved Keywords are few Keywords which are reserved by python program and it doesnot alow us to use in our code.
+	>>> help('keywords')
+	Here is a list of the Python keywords.  Enter any keyword to get more help.
+	False               class               from                or
+	None                continue            global              pass
+	True                def                 if                  raise
+	and                 del                 import              return
+	as                  elif                in                  try
+	assert              else                is                  while
+	async               except              lambda              with
+	await               finally             nonlocal            yield
+	break               for                 not
+
+Note : When ever you load some variables and working on terminal in Python those are for temporary purpose those will not be stored permanently. When ever you close the terminal all the variable data will be lost.
+
+How to find the address of a variable data in ram ?
+Use id() to find out the address location.
+
+Syntax : id(<variable>)
+
+>>> a = 10
+>>> b = 20
+>>> c = 10
+>>> id(a)
+140737262122056
+>>> id(b)
+140737262122376
+>>> id(c)
+140737262122056
+>>> d = a
+>>> id(d)
+140737262122056
+
+Who is Responsible of Assigning some Memory to Python?
+PVM is responsible for that. PVM is called as Python Virtual Memory.
+
+In Python garbage collector is used to clear the unused variable and clear them after sometime to free up the space.
+============================================================================================
+					Session 4
+
+print()
+
+
+
+Add Content of Notes Here of those of previous sessions. from Notes by vadlakunta
+
+==================> Data Types <================
+
+
+======================================================
+session 5 (27-05-2023) DataTypes2
+
+
+==========================================================
+Session 6 (29-05-2023) DataTypes3
+
