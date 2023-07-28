@@ -1,0 +1,183 @@
+Assighnments&Solutions
+####################################################################################################################
+Python-Day-01(Assignments-01)	Date: *25-05-2023
+----------------------------------------------------------------
+1) Create a Variable to store the any integer value and print it with "print()" function.
+2) Take any number, Manually convert it to Binary,Octal,Hexa-Decimal Format
+	Ex: 250	
+		1) Binary Format of 250 is			-->
+		2) Octal Format of 250 is			-->
+		3) Hexa Decimal Format of 250 is	-->
+3) Problem(2),Convert by using functions ? (bin(),oct(),hex())
+4) What is use of int() function.
+    I have a string "25"  (between double quotes)
+    >>> x = "25"
+   >>> type(x)
+	<class,"str">
+  My requirement is, is it possible to convert as a "int" object? if yes, give the explanation with above value?
+5) Find more details of "del" keyword? How to use it? 
+----------------------------------------------------------------
+Day-01(Daywise-Assignment)-Solutions
+----------------------------------------------------------------
+1) Create a Variable to store the any integer value and print it with "print()" function.
+a=30
+print(a)
+2) Take any number, Manually convert it to Binary,Octal,Hexa-Decimal Format
+	Ex: 250	
+		1) Binary Format of 250 is			--> 11111010.
+		2) Octal Format of 250 is			--> 372
+		3) Hexa Decimal Format of 250 is	--> FA
+3) Problem(2),Convert by using functions ? (bin(),oct(),hex())
+	bin(250) <===============> int(0b11111010)
+	oct(250) <===============> int(0o372)
+	hex(250) <===============> int(0xFA)
+4) What is use of int() function.
+    I have a string "25"  (between double quotes)
+    >>> x = "25"
+    >>> type(x)
+	<class,"str">
+	My requirement is, is it possible to convert as a "int" object? if yes, give the explanation with above value?
+>> int(x)
+25
+>> a = int(x)
+>> type(a)
+<class,'int'>
+Initially, the variable x holds the string value "25".
+When int(x) is called, the int() function takes the string "25" and converts it to the integer value 25.
+The converted integer value 25 is then assigned back to the variable x.
+The type() function is used to check the data type of x. After conversion, type(x) will return <class 'int'>.
+Therefore, by using the int() function, you can convert the string "25" to an integer object.
+5) Find more details of "del" keyword? How to use it? 
+You can use del to remove a variable and its associated reference. This frees up the memory occupied by the object, allowing it to be garbage-collected.
+####################################################################################################################
+Python-Weekend-02(Assignment)-27/May/2023
+----------------------------------------------------------------
+1) a = "25"
+   b = "75
+Add them print their result with a single Assignment Operator(=)?
+2) Find the ASCII value of "z" and "Z"
+3) Is python case-sensitive? if yes, give an example with Variable concept?
+4) what are available element in "complex" object?
+5) What is len? How to use it? Where to use it?
+----------------------------------------------------------------
+Weekend-02(Assignment)-Solutions
+----------------------------------------------------------------
+1) a = "25"
+   b = "75
+Add them print their result with a single Assignment Operator(=)?
+>>> c = int(a) + int(b)
+>>>print(c)
+2) Find the ASCII value of "z" and "Z"
+>>> ord('z')
+122
+>>> ord('Z')
+90
+3) Is python case-sensitive? if yes, give an example with Variable concept?
+>>> a = 50
+>>> A = 25
+>>> print (a, A)
+50    25
+>>> a = ture
+Traceback (most recent call last):
+  File "<pyshell#10>", line 1, in <module>
+    a = ture
+NameError: name 'ture' is not defined
+>>> a = True
+>>> a
+True
+4) what are available element in "complex" object?
+Real and Imaginary numbers
+5) What is len? How to use it? Where to use it?
+	Len used to count the Number of items in the iterable-object like in string,
+	count of the characters (strings), in the blow example: a assign sting value and len counted number of string.
+>>> a = 'Python'
+>>> type(a)
+<class 'str'>
+>>> len(a)
+6
+####################################################################################################################
+Daywise-Assignment-02(05-06-2023)
+----------------------------------------------------------------
+1) Print below pattern   10,17,24,31,38,45
+2) Print 10 to -4 with range() function
+3) Create a Program to Print first 5 Multiples of the given number.
+	Example:
+		a) Take an input from the user(by using input())  # Example: 12
+		b) then print: 
+			Result: 12,24,36,48,60
+4) Print this result: *range(12,-12,3)
+5) Print 0-10 numbers in 3-Methods
+		a) range(end)
+		b) range(start,end)
+		c) range(start,end,step)
+----------------------------------------------------------------
+Day-wise Assignment(05-06-2023)-Solutions
+----------------------------------------------------------------
+1) Print below pattern   10,17,24,31,38,45
+a= range (10,46,7)
+for x in a:
+    print(x)
+2) Print 10 to -4 with range() function
+a= range(10,-5,-1)
+for x in a:
+    print(x)
+3) Create a Program to Print first 5 Multiples of the given number.
+Example:
+	a) Take an input from the user(by using input())  # Example: 12
+	b) then print:
+	Result: 12,24,36,48,60
+	b=int(input("Enter Multiplying Number : "))
+	for i in range(1,6,1):
+		print(b,"x",i,"=",b*i)
+4) Print this result: *range(12,-12,3)
+>>> ''
+Empty result
+5) Print 0-10 numbers in 3-Methods
+	a) range(end)  
+	a=range(11)
+	for x in a:
+		print(x)
+	
+	b) range(start,end) 
+	a=range(0,11)
+	for x in a:
+		print(x)
+	
+	c) range(start,end,step)
+	a=range(0,11,1)
+	for x in a:
+		print(x)
+####################################################################################################################
+Daywise(Assigment)-3(07/06/2023)
+----------------------------------------------------------------
+1) Create a list with 1,100 numbers  (hint: use list() function and range() function)
+2) Print a list items in reverse order by using slicing.
+		Ex: [10,20,'Python',3.14,True,3+4j,range(5)]
+3) Is it possible to create a list with using list() function and [ ]? if possible define it? (use:Google)
+4) a = [10,20,30,40,50]
+    Findout sum of the all items of the list "a"(Hint: use for loop)
+5) Create a Deep & Shallow copy of the list and add the element to them. And show the Memory Address of it
+####################################################################################################################
+Day-wise-Assignment(08/06/2023)-Solutions
+----------------------------------------------------------------
+1) Create a tuple with 1-100 numbes
+2) Insert a value into existing tuple?  Is it possible? 
+3) Take a list and convert as a tuple?
+4) Do the all operation of list on tuple object? will it work?What is a Reason?
+5) Take a list with all numbers, Print it one by one, sort and reverse it in a single step?
+####################################################################################################################
+Weekend-Assigment(10,11th of June-2023)
+----------------------------------------------------------------
+1) Findout all Methods & usage of the set datatype
+2) Findout all Methods & usage of the str (optional-assigmnent) 
+####################################################################################################################
+Weekend-Assignment(18/06/2023)
+----------------------------------------------------------------
+1) Take a range() object and explain all methods with examples (which are not starting with "__")
+2) Convert an range() object to list
+3) Is it possible to take 5 inputs with a single input() function.if Yes, give an example?
+4) Take a iterable object and convert to other iterable object.
+	Example : a = "Python scripting"--> str object
+convert above string object(a) to possible other iterable objects
+5) Given an examples on sorted(),del,max(),round() and pow()
+####################################################################################################################
