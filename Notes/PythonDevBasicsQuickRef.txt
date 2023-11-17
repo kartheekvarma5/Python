@@ -1,8 +1,8 @@
 5 // 2	(only int val//Also called as floor division)
 5 ** 2	(Square 5^2)
 5 % 2	(Modulus which is also called as remainder)
-3 * 'Kartheek'	(print multiple times)
-KartheekKartheekKartheek
+3 * 'HELLO'	(print multiple times)
+HelloHelloHello
 print(r'c:\hello\')	(Raw string)
 
 _ is operation output (7 is o/p of some operation || _ + 3 = 10 )
